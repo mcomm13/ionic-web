@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 
 // Angular WWW output folder
 app.use(express.static(path.join(__dirname, "www")));
+//app.use(express.static("www"));
 //app.use(express.static(__dirname));
 
 // API location
