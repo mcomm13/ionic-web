@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 
 // Angular WWW output folder
 app.use(express.static(path.join(__dirname, "www")));
+//app.use(express.static(__dirname));
 
 // API location
 // app.use('/api', api);
@@ -24,12 +25,13 @@ app.use(express.static(path.join(__dirname, "www")));
 // Send all other requests to the Angular app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "www/index.html"));
+  //res.sendFile(path.join(__dirname, "src/index.html"));
 });
 
 //Set Port
 const port = process.env.PORT || "8080";
 app.set("port", port);
+app.listen(port, () => console.log(`Running on localhost:${port}`));
 
-const server = http.createServer(app);
-
-server.listen(port, () => console.log(`Running on localhost:${port}`));
+//const server = http.createServer(app);
+//server.listen(port, () => console.log(`Running on localhost:${port}`));
