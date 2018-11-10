@@ -15,7 +15,11 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'mobile-apps', loadChildren: './mobile-apps/mobile-apps.module#MobileAppsPageModule' }
+  {
+    path: 'mobile-apps',
+    loadChildren: './mobile-apps/mobile-apps.module#MobileAppsPageModule'
+  },
+  { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' }
 ];
 
 @NgModule({

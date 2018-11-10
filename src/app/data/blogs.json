@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "New site is in development",
+      "date": "11-10-2018",
+      "author": "Mike Commendatore",
+      "content": "<p>Hi everyone!  I'm currently working on a new web site.</p>"
+    },
+    {
+      "title": "Live music performance",
+      "date": "11-10-2018",
+      "author": "Mike Commendatore",
+      "content": "<p>Last week, I had the honor of performaning at the Infinity Hall in Hartford.</p><p>Here's a video of my performance: <a href='https://drive.google.com/open?id=1QldT4xaZlpliCDUPDiX1a1SjRRZJmk2O'>Video</a>"
+    }
+  ]
+}

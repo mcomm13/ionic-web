@@ -16,10 +16,11 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },  {
+      title: 'Blog',
+      url: '/blog',
+      icon: 'paper'
+    },
+    {
       title: 'Mobile Apps',
       url: '/mobile-apps',
       icon: 'appstore'
