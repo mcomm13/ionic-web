@@ -19,7 +19,8 @@ const routes: Routes = [
     path: 'mobile-apps',
     loadChildren: './mobile-apps/mobile-apps.module#MobileAppsPageModule'
   },
-  { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' }
+  { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' },
+  { path: 'resume', loadChildren: './resume/resume.module#ResumePageModule' }
 ];
 
 @NgModule({

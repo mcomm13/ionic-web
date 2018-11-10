@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Mobile Apps',
       url: '/mobile-apps',
       icon: 'appstore'
+    },
+    {
+      title: 'Resume',
+      url: '/resume',
+      icon: 'laptop'
     }
   ];
 
