@@ -1,16 +1,22 @@
 {
   "blogs": [
     {
-      "title": "New site is in development",
+      "title": "Music performance: T-Factor 2017",
       "date": "11-10-2018",
+      "author": "Mike Commendatore",
+      "content": "<p>Here's a video of me performing \"All The Small Things\" at the Infinity Hall: <a href='https://drive.google.com/file/d/0B5r2UvSl061GdGJiTnNwekloRGc/view' target='_blank'>Video</a></p>"
+    },
+    {
+      "title": "New site is in development",
+      "date": "11-09-2018",
       "author": "Mike Commendatore",
       "content": "<p>Hi everyone!  I'm currently working on a new web site.</p>"
     },
     {
-      "title": "Live music performance",
+      "title": "Music Performance: T-Factor 2018",
       "date": "11-10-2018",
       "author": "Mike Commendatore",
-      "content": "<p>Last week, I had the honor of performaning at the Infinity Hall in Hartford.</p><p>Here's a video of my performance: <a href='https://drive.google.com/open?id=1QldT4xaZlpliCDUPDiX1a1SjRRZJmk2O'>Video</a>"
+      "content": "<p>Here's a video of my performance at the 2018 T-Factor talent show at the Infinity Hall: <a href='https://drive.google.com/open?id=1QldT4xaZlpliCDUPDiX1a1SjRRZJmk2O' target='_blank'>Video</a>"
     }
   ]
 }

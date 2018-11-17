@@ -7,4 +7,53 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding> </ion-content>
+<ion-content padding>
+  <div>
+    <h1>Michael Commendatore</h1>
+    <div>Put contact info here</div>
+    <div>
+      <p><strong>Objective:</strong>Blah</p>
+    </div>
+  </div>
+  <ion-card>
+    <ion-card-header> <ion-card-title>Skills</ion-card-title> </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li *ngFor="let skill of resumeData.skills">{{ skill }}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Work Experience</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let job of resumeData.jobs">
+        <p>{{ job.company }}</p>
+        <p>Role: {{ job.role }}</p>
+        <p>{{ job.dates }}</p>
+        <p>Responsibilities:</p>
+        <ul>
+          <li *ngFor="let responsibility of job.responsibilities">
+            {{ responsibility }}
+          </li>
+        </ul>
+        <p>Accomplishments:</p>
+        <ul>
+          <li *ngFor="let highlight of job.highlights">{{ highlight }}</li>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Education </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let edu of resumeData.education">
+        <p>{{ edu.school }} - Class of {{ edu.yearGraduated }}</p>
+        <p>{{ edu.degree }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

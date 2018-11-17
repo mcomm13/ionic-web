@@ -1,0 +1,44 @@
+{
+  "jobs": [
+    {
+      "company": "Travelers Insurance",
+      "role": "Software Developer",
+      "dates": "Jan 2012 - Present",
+      "responsibilities": ["stuff"],
+      "highlights": ["other stuff", "", ""]
+    },
+    {
+      "company": "TicketNetwork",
+      "role": "Junior Software Engineer",
+      "dates": "Jan 2011 - Dec 2011",
+      "responsibilities": ["stuff"],
+      "highlights": ["other stuff", "", ""]
+    }
+  ],
+  "skills": [
+    "Web Development",
+    "Angular",
+    "TypeScript",
+    "JavaScript",
+    "NodeJS",
+    "HTML",
+    "CSS/SCSS/LESS",
+    "Azure",
+    "Pivotal Cloud Foundry",
+    "Technical Communication",
+    "Agile Software Development"
+  ],
+  "otherAccomplishments": ["personal stuff", "", ""],
+  "education": [
+    {
+      "school": "Central Connecticut State University",
+      "yearGraduated": "2014",
+      "degree": "Master of Science in Computer Information Technology"
+    },
+    {
+      "school": "University of Connecticut",
+      "yearGraduated": "2010",
+      "degree": "Bachelor of Science in Cognitive Science"
+    }
+  ]
+}

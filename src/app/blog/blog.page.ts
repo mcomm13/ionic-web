@@ -11,6 +11,11 @@ export class BlogPage implements OnInit {
   constructor(private blogService: BlogService) {}
 
   ngOnInit() {
-    this.blogData = this.blogService.getAllBlogPosts() || [];
+    const blogs = this.blogService.getAllBlogPosts() || [];
+    this.blogData = blogs.sort((a, b) => {
+      const aDate = new Date(a.date).getTime();
+      const bDate = new Date(b.date).getTime();
+      return bDate - aDate;
+    });
   }
 }
