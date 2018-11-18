@@ -13,7 +13,7 @@
       <ion-card-title>{{ blog.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <div>{{ blog.date }}</div>
+      <div>{{ blog.date | date: 'mediumDate' }}</div>
       <div [innerHtml]="blog.content"></div>
     </ion-card-content>
   </ion-card>
