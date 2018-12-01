@@ -16,6 +16,7 @@
       <ion-card-title>{{ app.name }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <div><img class="app-icon" [src]="app.icon" /></div>
       <p>{{ app.pitch }}</p>
       <ion-button color="dark" (click)="goToAppStore(app.iosUrl)">
         <ion-icon name="logo-apple"></ion-icon>Download for iOS</ion-button

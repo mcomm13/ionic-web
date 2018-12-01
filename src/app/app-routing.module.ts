@@ -20,7 +20,8 @@ const routes: Routes = [
     loadChildren: './mobile-apps/mobile-apps.module#MobileAppsPageModule'
   },
   { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' },
-  { path: 'resume', loadChildren: './resume/resume.module#ResumePageModule' }
+  { path: 'resume', loadChildren: './resume/resume.module#ResumePageModule' },
+  { path: 'music', loadChildren: './music/music.module#MusicPageModule' }
 ];
 
 @NgModule({

@@ -29,6 +29,11 @@ export class AppComponent {
       title: 'Resume',
       url: '/resume',
       icon: 'laptop'
+    },
+    {
+      title: 'Music',
+      url: '/music',
+      icon: 'musical-notes'
     }
   ];
 

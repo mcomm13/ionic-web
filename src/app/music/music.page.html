@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Music</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let song of musicData">
+    <ion-card-header>
+      <ion-card-title>{{ song.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div>Year written: {{ song.year }}</div>
+      <div>{{ song.description }}</div>
+      <div>
+        <audio controls="controls">
+          <source
+            src="https://drive.google.com/file/d/1dONPNloAz9xvg3axfcUFIbPBNp8H_BQ-/view?usp=sharing"
+          />
+        </audio>
+
+        <!--
+          <iframe
+            src="https://drive.google.com/file/d/1dONPNloAz9xvg3axfcUFIbPBNp8H_BQ-/view?usp=sharing"
+          ></iframe>
+        -->
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
