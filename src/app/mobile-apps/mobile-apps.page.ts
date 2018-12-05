@@ -29,7 +29,7 @@ export class MobileAppsPage implements OnInit {
           'https://play.google.com/store/apps/details?id=com.ionicframework.wordbuildinggame987903',
         status: 'Active',
         pitch: 'A fast-paced word building game with a global leaderboard.',
-        icon: '/assets/images/watc_icon.webp'
+        icon: '/assets/images/watc_icon.png'
       },
       {
         name: 'Football Squares Number Picker',
@@ -40,7 +40,7 @@ export class MobileAppsPage implements OnInit {
         status: 'Active',
         pitch:
           'A fancy random number picker designed for Football Squares games.',
-        icon: '/assets/images/football_squares_icon.webp'
+        icon: '/assets/images/football_squares_icon.png'
       },
       {
         name: 'Memory Stretch',
@@ -51,7 +51,7 @@ export class MobileAppsPage implements OnInit {
         status: 'Active',
         pitch:
           'A collection of games designed to test the limits of your memory.',
-        icon: '/assets/images/memory_stretch_icon.webp'
+        icon: '/assets/images/memory_stretch_icon.png'
       },
       {
         name: 'Multi-Task Color-Match',
@@ -62,7 +62,7 @@ export class MobileAppsPage implements OnInit {
         status: 'Active',
         pitch:
           'Can you manage to play two color-matching games at the same time?',
-        icon: '/assets/images/mtcm_icon.webp'
+        icon: '/assets/images/mtcm_icon.png'
       }
     ];
   }
