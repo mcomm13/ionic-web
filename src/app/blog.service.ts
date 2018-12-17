@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
-import * as data from './data/blogs.json';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getAllBlogPosts() {
-    const blogs = (<any>data).blogs;
-    return blogs;
+  getAllBlogPosts(): Promise<any> {
+    return this.http
+      .get('/api/blogs')
+      .toPromise()
+      .then((blogs: any) => {
+        console.log(blogs);
+        return blogs && blogs.data;
+      });
   }
 }

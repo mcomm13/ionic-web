@@ -12,6 +12,13 @@ export class MusicPage implements OnInit {
   constructor(private musicService: MusicService) {}
 
   ngOnInit() {
-    this.musicData = this.musicService.getMyMusic();
+    this.musicService.getMyMusic().then(songs => {
+      this.musicData = songs || [];
+      this.musicData = songs.sort((a, b) => {
+        const aDate = new Date(a.date).getTime();
+        const bDate = new Date(b.date).getTime();
+        return bDate - aDate;
+      });
+    });
   }
 }

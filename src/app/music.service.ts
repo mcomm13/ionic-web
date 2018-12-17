@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-import * as data from './data/music.json';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MusicService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getMyMusic(): any[] {
-    const music = (<any>data).songs || [];
-    return music.sort((a, b) => {
-      const aDate = new Date(a.date).getTime();
-      const bDate = new Date(b.date).getTime();
-      return bDate - aDate;
-    });
+  getMyMusic(): Promise<any> {
+    return this.http
+      .get('/api/music')
+      .toPromise()
+      .then((songs: any) => {
+        console.log(songs);
+        return songs && songs.data;
+      });
   }
 }
