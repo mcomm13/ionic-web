@@ -9,7 +9,7 @@ export class MusicService {
 
   getMyMusic(): Promise<any> {
     return this.http
-      .get('/api/music')
+      .get('http://mcomm-web-api.azurewebsites.net/api/music')
       .toPromise()
       .then((songs: any) => {
         console.log(songs);

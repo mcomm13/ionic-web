@@ -9,7 +9,7 @@ export class BlogService {
 
   getAllBlogPosts(): Promise<any> {
     return this.http
-      .get('/api/blogs')
+      .get('http://mcomm-web-api.azurewebsites.net/api/blogs')
       .toPromise()
       .then((blogs: any) => {
         console.log(blogs);
