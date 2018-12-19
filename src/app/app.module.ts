@@ -4,7 +4,8 @@ import { RouteReuseStrategy } from '@angular/router';
 import {
   HashLocationStrategy,
   Location,
-  LocationStrategy
+  LocationStrategy,
+  PathLocationStrategy
 } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -29,7 +30,7 @@ import { AppRoutingModule } from './app-routing.module';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Location,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: PathLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
