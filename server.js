@@ -10,16 +10,14 @@ const api = require('./server/routes/api');
 app.use(bodyParser.json());
 
 // Angular WWW output folder
-// app.use(express.static(path.join(__dirname, 'www')));
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'www')));
 
 // API location
 app.use('/api', api);
 
 // Send all other requests to the Angular app
 app.get('*', (req, res) => {
-  // res.sendFile(path.join(__dirname, 'www/index.html'));
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'www/index.html'));
 });
 
 //Set Port
