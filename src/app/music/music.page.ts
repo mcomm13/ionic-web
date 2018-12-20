@@ -15,10 +15,9 @@ export class MusicPage implements OnInit {
     this.musicService.getMyMusic().then(songs => {
       this.musicData = songs || [];
       this.musicData = songs.sort((a, b) => {
-        const aDate = new Date(a.date).getTime();
-        const bDate = new Date(b.date).getTime();
-        return bDate - aDate;
+        return a.title === b.title ? 0 : a.title > b.title ? 1 : -1;
       });
+      console.log(this.musicData);
     });
   }
 }
