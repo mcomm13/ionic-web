@@ -17,16 +17,18 @@
   ],
   "skills": [
     "Web Development",
-    "Angular",
-    "TypeScript",
-    "JavaScript",
-    "NodeJS",
-    "HTML",
-    "CSS/SCSS/LESS",
-    "Azure",
-    "Pivotal Cloud Foundry",
     "Technical Communication",
-    "Agile Software Development"
+    "Agile Software Development",
+    "Angular",
+    "TypeScript/JavaScript",
+    "NodeJS",
+    "Express",
+    "MongoDB",
+    "HTML",
+    "CSS/SCSS",
+    "Azure",
+    "AWS Lambda Functions",
+    "Pivotal Cloud Foundry"
   ],
   "otherAccomplishments": ["personal stuff", "other stuff", ""],
   "education": [

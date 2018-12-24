@@ -17,7 +17,6 @@ export class MusicPage implements OnInit {
       this.musicData = songs.sort((a, b) => {
         return a.title === b.title ? 0 : a.title > b.title ? 1 : -1;
       });
-      console.log(this.musicData);
     });
   }
 }
