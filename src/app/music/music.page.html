@@ -7,7 +7,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngIf="!musicData">
+  <ion-spinner color="primary"></ion-spinner>
+</ion-content>
+
+<ion-content padding *ngIf="musicData">
   <div class="page-intro">
     <p>Before I learned how to code, my main creative outlet was music.</p>
     <p>
