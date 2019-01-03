@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Blog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="!blog">
+  <ion-spinner color="primary"></ion-spinner>
+</ion-content>
+
+<ion-content padding *ngIf="blog">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ blog.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div><strong>Author: </strong>{{ blog.author }}</div>
+      <div><strong>Date: </strong>{{ blog.date | date: 'mediumDate' }}</div>
+      <div class="blog-content" [innerHtml]="blog.content"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

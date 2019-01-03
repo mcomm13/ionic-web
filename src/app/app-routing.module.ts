@@ -21,7 +21,11 @@ const routes: Routes = [
   },
   { path: 'blog', loadChildren: './blog/blog.module#BlogPageModule' },
   { path: 'resume', loadChildren: './resume/resume.module#ResumePageModule' },
-  { path: 'music', loadChildren: './music/music.module#MusicPageModule' }
+  { path: 'music', loadChildren: './music/music.module#MusicPageModule' },
+  {
+    path: 'blog/:title',
+    loadChildren: './blog-detail/blog-detail.module#BlogDetailPageModule'
+  }
 ];
 
 @NgModule({

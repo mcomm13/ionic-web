@@ -15,4 +15,12 @@ export class BlogService {
         return blogs && blogs.data;
       });
   }
+
+  sortBlogsByDate(blogs): any[] {
+    return blogs.sort((a, b) => {
+      const aDate = new Date(a.date).getTime();
+      const bDate = new Date(b.date).getTime();
+      return bDate - aDate;
+    });
+  }
 }

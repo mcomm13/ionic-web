@@ -1,2 +1,3 @@
 # ionic-web
-Personal web app with Ionic
+
+A personal web site created by Michael Commendatore using the Ionic Framework
