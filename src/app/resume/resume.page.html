@@ -51,7 +51,9 @@
     </ion-card-header>
     <ion-card-content>
       <div *ngFor="let job of resumeData.jobs">
-        <p>{{ job.company }}</p>
+        <p>
+          <strong>{{ job.company }}</strong>
+        </p>
         <p>Role: {{ job.role }}</p>
         <p>{{ job.dates }}</p>
         <p>Responsibilities:</p>
@@ -63,6 +65,20 @@
         <p>Accomplishments:</p>
         <ul>
           <li *ngFor="let highlight of job.highlights">{{ highlight }}</li>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Personal Projects and Accomplishments </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div>
+        <ul>
+          <li *ngFor="let other of resumeData.otherAccomplishments">
+            {{ resumeData.other }}
+          </li>
         </ul>
       </div>
     </ion-card-content>
