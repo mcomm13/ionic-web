@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../services/blog.service';
 import { DataCacheService } from '../services/data-cache.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog-detail',
@@ -14,7 +15,8 @@ export class BlogDetailPage implements OnInit {
   constructor(
     private blogService: BlogService,
     private dataCacheService: DataCacheService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private domSanitizer: DomSanitizer
   ) {}
 
   ngOnInit() {
@@ -24,6 +26,9 @@ export class BlogDetailPage implements OnInit {
       this.blog = cachedBlogData.find(item => {
         return item.title === decodeURIComponent(routeParam);
       });
+      if (this.blog) {
+        this.blog.sanitizedUrl = this.sanitizeUrl(this.blog.youtubeUrl);
+      }
     } else {
       this.blogService.getAllBlogPosts().then(blogs => {
         blogs = this.blogService.sortBlogsByDate(blogs || []);
@@ -31,7 +36,18 @@ export class BlogDetailPage implements OnInit {
         this.blog = blogs.find(item => {
           return item.title === decodeURIComponent(routeParam);
         });
+        if (this.blog) {
+          this.blog.sanitizedUrl = this.sanitizeUrl(this.blog.youtubeUrl);
+        }
       });
+    }
+  }
+
+  private sanitizeUrl(url) {
+    if (url) {
+      return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
+    } else {
+      return '';
     }
   }
 }
