@@ -21,8 +21,13 @@
       "company": "TicketNetwork",
       "role": "Junior Software Engineer",
       "dates": "Jan 2011 - Dec 2011",
-      "responsibilities": ["stuff"],
-      "highlights": ["other stuff", "", ""]
+      "responsibilities": [
+        "Created and updated e-commerce web sites for ticket brokers using a template-based tool.",
+        "Developed new functionality on the company's news and e-commerce web sites."
+      ],
+      "highlights": [
+        "Started my web development career working on web sites related to entertainment ticket sales."
+      ]
     }
   ],
   "skills": [
