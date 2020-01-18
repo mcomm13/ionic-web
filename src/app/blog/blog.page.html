@@ -8,6 +8,9 @@
 </ion-header>
 
 <ion-content padding *ngIf="!blogData">
+  <div>
+    I'm using a free-tier database, so it might need a minute to wake up...
+  </div>
   <ion-spinner color="primary"></ion-spinner>
 </ion-content>
 
@@ -15,9 +18,9 @@
   <ion-card *ngFor="let blog of blogData">
     <ion-card-header>
       <ion-card-title
-        ><a [routerLink]="['/blog', blog.title]">{{
-          blog.title
-        }}</a></ion-card-title
+        ><a [routerLink]="['/blog', blog.title]"
+          >{{ blog.title }}</a
+        ></ion-card-title
       >
     </ion-card-header>
     <ion-card-content>
